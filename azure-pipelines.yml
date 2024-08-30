@@ -9,6 +9,13 @@ trigger:
 pool: Adrian
 
 steps:
+
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
