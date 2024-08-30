@@ -21,3 +21,8 @@ steps:
     echo Hola
     echo Soy negro
   displayName: "Creating new job"
+
+- script: |
+    pip install pytest pytest-azurepipelines
+    pytest
+  displayName: 'pytest'
